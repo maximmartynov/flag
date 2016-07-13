@@ -923,9 +923,6 @@ func (f *FlagSet) Parse(arguments []string) error {
 		case PanicOnError:
 			panic(err)
 		case IgnoreError:
-			if err == ErrHelp {
-				os.Exit(2)
-			}
 			continue
 		}
 	}
